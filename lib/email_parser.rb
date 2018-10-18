@@ -10,6 +10,6 @@ class EmailParser
   end
   
   def parse
-    @email.split(/\s|,/).delete("")
+    @email.split(/\s|,/).delete_if { |value| value == ""}.uniq
   end
 end
