@@ -11,12 +11,13 @@ class EmailParser
    end
 
    def parse
-     arr = []
-     arr = @emails.split(/[,\s]/)
-     arr = arr.uniq
-     arr.reject { |item| item.nil? || item == '' }
+     parser = []
+     parser = @emails.split(/[,\s]/)
+     parser = parser.uniq
+     parser1 = parser.reject { |item| item.nil? || item == '' }
      # refactor like this?
-     # arr.uniq! { |x| x[:emails] }
+     # parser.uniq! { |x| x[:emails] }
+     parser1
      # binding.pry
    end
 end
